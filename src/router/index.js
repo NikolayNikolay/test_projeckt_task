@@ -1,25 +1,33 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from "vue-router";
+import TheUsers from "../components/main/users/TheUsers.vue";
+import TheFormWorking from "../components/main/form/TheFormWorking.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/form",
+    name: "form",
+    component: TheFormWorking,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: "/:userVisivle?",
+    name: "user",
+    component: TheUsers,
+  },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
-})
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    } else if (to.name !== "user") {
+      return { left: 0, top: 0, behavior: "smooth" };
+    }
+  },
+});
 
-export default router
+export default router;

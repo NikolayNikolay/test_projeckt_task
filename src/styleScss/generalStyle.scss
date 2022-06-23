@@ -1,0 +1,41 @@
+[class*="__container"]{
+   max-width: rem(1170);
+   margin: 0 auto;
+   @media (max-width:rem(2560)) {
+      padding:0px rem(60);
+   }
+   @media (max-width:rem(1023)) {
+      padding: 0px rem(30);
+   } 
+   @media (max-width:rem(768)) {
+      padding: 0px rem(16);
+   }  
+   // @media (min-width:rem(360)) {
+   //    padding: 0px rem(16);
+   // }  
+}
+
+h1{
+   font-size: rem(40);
+   line-height: 1;
+   text-align: center;
+}
+h2{
+   font-size: rem(40);
+   line-height: 1;
+   text-align: center;
+}
+
+button{
+   border-radius: 80px;
+   background: #F4E041;
+   transition: all 0.3s ease 0s;
+   padding: rem(4) rem(22);
+   height: rem(34);
+   &:hover{
+      background: #FFE302;
+   }
+   &:disabled{
+      background: #B4B4B4;
+   }
+}

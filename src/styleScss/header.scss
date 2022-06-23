@@ -1,0 +1,38 @@
+.header {
+   padding: rem(13) 0px;
+   
+   // .haeder__container
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   // .header__logo
+   &__logo {
+      display: flex;
+      column-gap: rem(2);
+      img{
+         width: rem(38);
+         height: 100%;
+      }
+   }
+   &__text-logo{
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      line-height: 1;
+   }
+   // .header__menu
+
+   &__menu {
+   }
+}
+.menu {
+   display: flex;
+   column-gap: rem(10);
+   // .menu__icon
+
+   &__icon {
+   }
+}

@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:regular);
+@import './null';
+@function rem($px) {
+	$result:($px / 16) + rem;
+	@return $result;
+}
+$fontFamily: "Nunito";
+$fontSize: rem(16); // где 14(px) - размер шрифта по умолчанию из макета
+
+// Основные цвета
+$mainColor: #000; // Цвет шрифта по умолчанию
+$yellow:#F4E041;
+$blue:#00BDD3;
+$ligt-gray:#F8F8F8; 
+@import './generalStyle.scss';
+@import './header';
+@import './main';
+
+
+
+
+  
+
+
+body{
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	color: $mainColor;
+	line-height: 1.6;
+}
+
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Прижимаем footer
+	> main {
+		flex: 1 1 auto;
+		background: $ligt-gray;
+	}
+}
