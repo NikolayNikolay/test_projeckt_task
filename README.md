@@ -1,4 +1,4 @@
-# test_projeckt_task
+# test_project_task
 
 ## Project setup
 ```
